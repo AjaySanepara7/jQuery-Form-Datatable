@@ -1,0 +1,29 @@
+.top-line{
+    height: 10px;
+    background-color: gold;
+}
+
+.body{
+    background-color: gray;
+}
+
+.container{
+    background-color: #f2f2f2;
+}
+
+.formbox{
+    background-color: white;
+}
+
+.d-flex.justify-content-center{
+    gap:50px;
+}
+
+.block{
+    display: block;
+}
+
+label.error{
+    display: none;
+    color: red;
+}

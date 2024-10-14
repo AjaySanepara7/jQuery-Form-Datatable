@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../Css/DataTable.css">
+    <link rel="stylesheet" href="../Css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdn.datatables.net/2.1.3/css/dataTables.dataTables.css" />
+</head>
+<body>
+    
+    <div class="p-3 col-sm-6 mx-auto container my-5">
+        <div class="top-line"></div>
+        <div class="formbox p-5">
+            
+            <h1 class="text-center pt-5">Responsive Registration form</h1>
+
+
+            <form class=" py-5 cmxform" id="form1" method="get" action>
+                <fieldset>
+
+                    <div>
+                        <div class="input-group mt-5 mb-2">
+                            <span class="input-group-text border border-2 border-dark">
+                                <img src="../Assets/image.png" class="w-100 h-100" alt="mail-logo">
+                            </span>
+                            <input type="email" id="email" class="form-control border border-2 border-dark" placeholder="Email" name="email">
+                        </div>
+                        <label for="email" class="error">Please enter a valid email address</label>
+                    </div>
+
+
+                    <div>
+                        <div class="input-group mt-5 mb-2">
+                            <span class="input-group-text border border-2 border-dark">
+                                <img src="../Assets/person.png" class="w-100 h-100" alt="mail-logo">
+                            </span>
+                            <input type="text" id="firstname" class="form-control border border-2 border-dark" placeholder="First Name" name="firstname">
+                        </div>
+                        <label for="firstname" class="error">Please enter your firstname</label>
+                    </div>
+
+
+                    <div>
+                        <div class="input-group mt-5 mb-2">
+                            <span class="input-group-text border border-2 border-dark">
+                                <img src="../Assets/person.png" class="w-100 h-100" alt="mail-logo">
+                            </span>
+                            <input type="text" id="lastname" class="form-control border border-2 border-dark" placeholder="Last Name" name="lastname">
+                        </div>
+                        <label for="lastname" class="error">Please enter your lastname</label>
+                    </div>
+
+
+
+
+                    
+
+                    <fieldset>
+                        <legend class="h6 pt-5">Gender</legend>
+                        <div class="d-flex  py-2">
+                            <div class="w-25">
+                                    <input type="radio" id="gender_male" value="Male" name="gender" >
+                                    <label for="gender_male">Male</label>
+                            </div>
+
+                            <div class="w-25">    
+                                    <input type="radio" id="gender_female" value="Female" name="gender">
+                                    <label for="gender_female">Female</label>
+                            </div>
+                        </div>
+                        <label for="gender" class="error">Please select your gender</label>
+                    </fieldset>
+
+
+                    <div class="mb-2">
+                        <select class="form-select mt-4 border border-2 border-dark" id="country" name="country">
+
+                            <option value=""disabled selected>Select a country</option>
+                            <option value="India">India</option>
+                            <option value="Japan">Japan</option>
+                            <option value="USA">USA</option>
+                            <option value="China">China</option>
+                            <option value="France">France</option>
+                            
+                        </select>
+                    </div>
+                    <label for="country" class="error">Please select a country</label>
+
+
+                    <fieldset>
+
+                        <legend class="mt-5 mb-3 h6">Select your Hobbies</legend>
+                        <div class="mt-4">
+                            <input type="checkbox" class="checkbox" id="hobby_sports" value="Sports" name="hobby" >
+                            <label for="hobby_sports">Sports</label>
+                        </div>
+
+                        <div class="mt-2">
+                            <input type="checkbox" class="checkbox" id="hobby_travelling" value="Travelling" name="hobby">
+                            <label for="hobby_travelling">Travelling</label>
+                        </div>
+
+                        <div class="mt-2">
+                            <input type="checkbox" class="checkbox" id="hobby_reading" value="Reading" name="hobby">
+                            <label for="hobby_reading">Reading</label>
+                        </div>
+
+                        <div class="mt-2">
+                            <input type="checkbox" class="checkbox" id="hobby_painting" value="Painting" name="hobby">
+                            <label for="hobby_painting">Painting</label>
+                        </div>
+                        
+                        <div class="my-2 mb-2">
+                            <input type="checkbox" class="checkbox" id="hobby_singing" value="Singing" name="hobby">
+                            <label for="hobby_singing">Singing</label>
+                        </div>
+                        <label for="hobby" class="error">Please select atleast one hobby</label>
+                        
+                    </fieldset>
+
+
+                    <div class="d-flex justify-content-center mt-5">
+                        <button type="submit" class="submit btn btn-success" id="save">Save</button>
+                        <button type="submit" class="submit btn btn-success" id="fill">AutoFill</button>
+                        <button type="submit" class="btn btn-danger" id="update">Update</button>
+                    </div>
+
+                </fieldset>
+            </form>
+        </div>
+    </div>
+
+    <table id="data" class="display">
+        <thead>
+            <tr>
+                <th>Sr No</th>
+                <th>Email</th>
+                <th>First Name</th>
+                <th>Last Name</th>
+                <th>Gender</th>
+                <th>Country</th>
+                <th>Hobby</th>
+                <th>Edit</th>
+                <th>Delete</th>
+            </tr>
+        </thead>
+    </table>
+
+
+
+    
+
+    
+</body>
+
+<script src="../JS/jquery-3.7.1.min.js"></script>
+<script src="https://cdn.datatables.net/2.1.3/js/dataTables.js"></script>
+<script src="../JS/DataTable.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/jquery-validation@1.19.5/dist/jquery.validate.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/jquery-validation@1.19.5/dist/additional-methods.min.js"></script>
+</html>
